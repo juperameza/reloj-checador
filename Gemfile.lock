@@ -241,7 +241,6 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
   sass-rails
-  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
