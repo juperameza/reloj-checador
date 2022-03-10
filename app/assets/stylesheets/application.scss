@@ -1,5 +1,7 @@
 @import 'base/normalize';
 @import 'base/typography';
+@import 'base/globals';
+@import 'utils/variables';
 @import 'components/buttons';
 @import 'layout/header';
 @import 'pages/admin_login';
@@ -8,4 +10,4 @@
 @import 'pages/index';
 @import 'pages/reports';
 @import 'utils/helpers';
-@import 'utils/variables';
+
