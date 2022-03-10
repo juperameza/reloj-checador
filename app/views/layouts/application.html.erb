@@ -8,9 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   </head>
 
   <body>
+    <%= render 'layouts/header' %> 
     <%= yield %>
   </body>
+  <script src="https://kit.fontawesome.com/dec85c1e0a.js" crossorigin="anonymous"></script>
 </html>
