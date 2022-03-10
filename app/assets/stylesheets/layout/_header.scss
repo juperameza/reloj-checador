@@ -1,59 +1,29 @@
-@import "../utils/variables";
-
 .header {
-  background-color: $background_color_header;
+  background-color: $blue_background;
   box-sizing: border-box;
   display: flex;
   height: 120px;
   justify-content: space-between; 
   padding: 0 20px;
   width: 100%;
+  align-items: center;
 
   .clock-icon {
-    align-self: center;
     font-size: 80px;
   }
   
   .title {
-    align-items: center;
-    align-self: center;
-    color: $font_color;
-    display: flex;
-    font-family: $font;
-    font-size: $font_size_title;
+    color: $white_title;
+    font-size: 70px;
   }
 
-  .img-logo {
-    align-items: center;
-    align-self: center;
-    display: flex;
-    height: 100px;
-    margin-top: 10px;
-    width: 100px;
-  }
-
-  .primary-button {
-    align-items: center;
-    align-self: center;
-    display: flex;
-  
-    button {
-      background-color: $primary_button;
-      border-radius: 10px;
-      border: none;
-      color: $font_color;
-      font-family: $font;
-      font-size: 20px;
-      height: 50px;
-      transition: all .4s ease-in-out;
-      width: 200px;
-    }
-  }
-
-  .primary-button :hover {
-    background-color: $secundary_button;
-    background-position: 100% 0;
-    color: black;
+  .primary-button-style {
+    background-color: $blue_button;
     transition: all .4s ease-in-out;
+    font-weight: 700;
+    
+    &:hover {
+      background-color: $blue_button_hover;
+    }
   }
 }
