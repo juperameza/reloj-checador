@@ -1,31 +1,31 @@
 .header {
+  align-items: center;
   background-color: $blue_background;
   box-sizing: border-box;
   display: flex;
   height: 120px;
   justify-content: flex-start; 
-  position: relative;  
   padding: 0 20px;
+  position: relative;  
   width: 100%;
-  align-items: center;
   
   .title {
-    color: $white_title;
-    font-size: 70px;
     align-self: auto;
+    color: $white_title;
     flex: 0 1 auto;
-    position: absolute;
+    font-size: 70px;
     left: 50%;
+    position: absolute;
     transform: translateX(-50%);
   }
   
   .primary-button-style {
     background-color: $red_button;
     color: $wheat_button;
-    transition: all .4s ease-in-out;
-    font-weight: 700;
     flex: 0 1 auto;
+    font-weight: 700;
     margin-left: auto;      
+    transition: all .4s ease-in-out;
     
     &:hover {
       background-color: $red_button_hover;
