@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_11_005723) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
   create_table "assistences", force: :cascade do |t|
@@ -53,6 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_11_005723) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["branch_id"], name: "index_employees_on_branch_id"
+    t.index ["email"], name: "index_employees_on_email", unique: true
   end
 
   create_table "street_cps", force: :cascade do |t|

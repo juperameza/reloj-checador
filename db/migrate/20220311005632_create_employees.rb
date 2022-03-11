@@ -9,5 +9,6 @@ class CreateEmployees < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    add_index :employees, :email, unique: true
   end
 end
