@@ -3,27 +3,32 @@
   box-sizing: border-box;
   display: flex;
   height: 120px;
-  justify-content: space-between; 
+  justify-content: flex-start; 
+  position: relative;  
   padding: 0 20px;
   width: 100%;
   align-items: center;
-
-  .clock-icon {
-    font-size: 80px;
-  }
   
   .title {
     color: $white_title;
     font-size: 70px;
+    align-self: auto;
+    flex: 0 1 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
-
+  
   .primary-button-style {
-    background-color: $blue_button;
+    background-color: $red_button;
+    color: $wheat_button;
     transition: all .4s ease-in-out;
     font-weight: 700;
+    flex: 0 1 auto;
+    margin-left: auto;      
     
     &:hover {
-      background-color: $blue_button_hover;
+      background-color: $red_button_hover;
     }
   }
 }
