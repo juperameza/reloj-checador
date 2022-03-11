@@ -1,25 +1,29 @@
-@import '../utils/variables';
-
-
 .main {
-  background-color: $background_color;
+  background-color: $blue_background;
   height: 85vh;
   display: flex;
   justify-content: space-around;
-  h1 {
-    margin: 0;
-  }
 
   .time {
     align-items: center;
     display: flex;
-    font-size: 50px;
+    flex-direction: column;
     justify-content: center;
     margin: 0;
+    font-family: $font;
   
-    h1 {
+    .hour {
       font-size: 300px;
-      font-family: $font;
+      color:  $black_hour_color;
+      .type {
+        font-size: 40px;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .date {
+      font-size: 60px;
+      color: $black_hour_color;
     }
   }
 
@@ -27,11 +31,12 @@
     display: flex;
     flex-direction: column;
     padding: 180px 0;
-    h6 {
+
+    h3 {
       font-size: 45px;
-      margin: 0;
-      margin: 20px;
+      margin-bottom: 10px;
       font-family: $font;
+      color: $aqua_label;
     }
 
     input {
@@ -39,7 +44,13 @@
       height: 50px;
       font-size: 40px;
       font-family: $font;
-      margin: 20px;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    ::placeholder {
+      opacity: 0.2;
     }
 
     button {
@@ -52,15 +63,13 @@
     }
   }
   
-}
-
-.secondary-button {
-    background-color: $secundary_button;
-    button {
-    border-radius: 10px;
-    border: none;
-    height: 50px;
-    width: 200px;
-    }
-   
+  .secondary-button-style {
+      background-color: $red_button;
+      color: $wheat_button;
+      font-weight: 700;
+      &:hover {
+        background-color: $red_button_hover;
+        transition: all .4s ease-in-out;
+      }
+  }
 }
