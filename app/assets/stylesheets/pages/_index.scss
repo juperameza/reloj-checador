@@ -1,0 +1,75 @@
+.main {
+  background-color: $blue_background;
+  display: flex;
+  height: 85vh;
+  justify-content: space-around;
+
+  .time {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+    justify-content: center;
+    margin: 0;
+  
+    .hour {
+      color:  $black_hour_color;
+      font-size: 300px;
+      .type {
+        flex-wrap: nowrap;
+        font-size: 40px;
+      }
+    }
+
+    .date {
+      color: $black_hour_color;
+      font-size: 60px;
+    }
+  }
+
+  .number {
+    display: flex;
+    flex-direction: column;
+    padding: 180px 0;
+
+    h3 {
+      color: $aqua_label;
+      font-family: $font;
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    input {
+      border-radius: 10px;
+      border: 0;
+      font-family: $font;
+      font-size: 40px;
+      height: 50px;
+      padding: 10px;
+      width: 350px;
+    }
+
+    ::placeholder {
+      opacity: 0.2;
+    }
+
+    button {
+      align-self: center;
+      font-family: $font;
+      font-size: 30px;
+      height: 40px;
+      margin: 20px;
+      width: 200px;
+    }
+  }
+  
+  .secondary-button-style {
+      background-color: $red_button;
+      color: $wheat_button;
+      font-weight: 700;
+      &:hover {
+        background-color: $red_button_hover;
+        transition: all .4s ease-in-out;
+      }
+  }
+}
