@@ -1,0 +1,2 @@
+class StreetCp < ApplicationRecord
+end
