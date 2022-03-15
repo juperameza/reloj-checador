@@ -14,17 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_11_005723) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admins", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "position"
-    t.integer "private_number"
-    t.string "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_admins_on_email", unique: true
-  end
-
   create_table "assistences", force: :cascade do |t|
     t.bigint "employee_id", null: false
     t.time "clock_in"
@@ -48,8 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_11_005723) do
   create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "position"
     t.integer "private_number"
+    t.boolean "position"
     t.bigint "branch_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
