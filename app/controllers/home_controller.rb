@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   #Registrar fecha de registro y mostrar mensaje de confirmacion
   #Sino existe, mostrar mensaje de error
   def index
-    @assistance = Assistence.find_by(id: 1)
   end
 
   def create
