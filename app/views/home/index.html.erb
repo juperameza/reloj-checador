@@ -1,19 +1,23 @@
 <div class="main">
   <div class="time">
     <span class="date">
-      10 marzo 2022
+      <%= I18n.l(Date.today, format: '%A, %d de %B de %Y') %>
     </span>
     <span class="hour">
-      7:40<span class="type">AM</span>
+      <%= Time.now.strftime("%H:%M") %>
     </span>
   </div>
   <div class="number">
-    <h3>
-      Private number
-    </h3>
-    <input type="text" class="input-text" placeholder="Enter number">
-    <button class="secondary-button-style">
-      CHECK
-    </button>
+    <%= form_with(model: @employee) do |form| %>
+      <div>
+        <%= form.label :private_number, class: "title" %><br>
+        <%= form.number_field :private_number, class: "input-text" %>
+      </div>
+      <%= form.submit "CHECK", class: "secondary-button-style" %>
+    <% end %>
+
+    <% if flash[:msg] %>
+      <%= javascript_tag "alert('#{flash[:msg]}')"%>
+    <% end %>
   </div>
 </div>
