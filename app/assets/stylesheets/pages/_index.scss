@@ -11,7 +11,7 @@
     font-family: $font;
     justify-content: center;
     margin: 0;
-  
+
     .hour {
       color:  $black_hour_color;
       font-size: 300px;
@@ -47,6 +47,7 @@
       height: 50px;
       padding: 10px;
       width: 350px;
+      cursor: pointer;
     }
 
     ::placeholder {
@@ -62,7 +63,7 @@
       width: 200px;
     }
   }
-  
+
   .secondary-button-style {
       background-color: $red_button;
       color: $wheat_button;
