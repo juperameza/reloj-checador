@@ -39,17 +39,6 @@
       margin-bottom: 10px;
     }
 
-    input {
-      border-radius: 10px;
-      border: 0;
-      font-family: $font;
-      font-size: 40px;
-      height: 50px;
-      padding: 10px;
-      width: 350px;
-      cursor: pointer;
-    }
-
     ::placeholder {
       opacity: 0.2;
     }
@@ -62,15 +51,5 @@
       margin: 20px;
       width: 200px;
     }
-  }
-
-  .secondary-button-style {
-      background-color: $red_button;
-      color: $wheat_button;
-      font-weight: 700;
-      &:hover {
-        background-color: $red_button_hover;
-        transition: all .4s ease-in-out;
-      }
   }
 }
