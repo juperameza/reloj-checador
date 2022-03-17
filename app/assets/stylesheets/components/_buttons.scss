@@ -7,3 +7,24 @@ button {
   height: 50px;
   width: 200px;
 }
+.secondary-button-style {
+  background-color: $red_button;
+  color: $wheat_button;
+  font-weight: 700;
+  &:hover {
+    background-color: $red_button_hover;
+    transition: all .4s ease-in-out;
+  }
+}
+.primary-button-style {
+  background-color: $red_button;
+  color: $wheat_button;
+  flex: 0 1 auto;
+  font-weight: 700;
+  margin-left: auto;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    background-color: $red_button_hover;
+  }
+}

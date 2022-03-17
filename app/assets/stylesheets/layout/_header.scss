@@ -18,17 +18,4 @@
     position: absolute;
     transform: translateX(-50%);
   }
-
-  .primary-button-style {
-    background-color: $red_button;
-    color: $wheat_button;
-    flex: 0 1 auto;
-    font-weight: 700;
-    margin-left: auto;      
-    transition: all .4s ease-in-out;
-    
-    &:hover {
-      background-color: $red_button_hover;
-    }
-  }
 }
