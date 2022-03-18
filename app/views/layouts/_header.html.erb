@@ -1,6 +1,8 @@
 <div class="header">
   <h1 class="title">Check In <i class="fa-solid fa-clock"></i></h1>
-  <button class="primary-button-style">
-    Admin Tools
-  </button>
+    <% if current_page?(controller: 'admin', action: 'login') %>
+      <%= button_to "Exit",  "/", method: :get, class: "primary-button-style" %>
+    <% else %>
+     <%= button_to "Admin tools", "/admin", method: :get, class: "primary-button-style" %>
+    <% end %>
 </div>

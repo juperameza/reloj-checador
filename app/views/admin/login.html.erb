@@ -1,0 +1,15 @@
+<main class = "main_login text-center">
+  <div>
+    <h1>Admin login</h1>
+    <%= form_with(model: @employee) do |form| %>
+      <div>
+        <%= form.label :email, class: "title" %><br>
+        <%= form.email_field  :email, class: "input-text", placeholder: "admin@hotmail.com"%>
+        <br>
+        <%= form.label :private_number, class: "title" %><br>
+        <%= form.password_field  :private_number, class: "input-text", placeholder: "********"%>
+      </div>
+      <%= form.submit "Sign in", class: "secondary-button-style" %>
+    <% end %>
+  </div>
+</main>
