@@ -12,13 +12,12 @@
 
   <body>
     <%= render 'layouts/header' %> 
-    <% if notice%>
-      <%= javascript_tag "alert('#{flash[:notice]}')"%>
-    <%end%>
-    <%if alert%>
-     <%= javascript_tag "alert('#{flash[:alert]}')"%>
-    <%end%>
-
+    <% if notice %>
+      <%= javascript_tag "alert('#{flash[:notice]}')" %>
+    <% end %>
+    <% if alert %>
+     <%= javascript_tag "alert('#{flash[:alert]}')" %>
+    <% end %>
     <%= yield %>
   </body>
   <script src="https://kit.fontawesome.com/dec85c1e0a.js" crossorigin="anonymous"></script>
