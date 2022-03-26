@@ -1,0 +1,73 @@
+.container__table_employees {
+  background-color: $blue_header_background;
+  border-radius: 25px;
+  border: 2px solid black;
+  margin: 2rem 0;
+}
+
+.table_employees {
+  border: 2px solid black;
+  color: white;
+  margin: 2rem;
+  width: 97%;
+
+  td {
+    text-align: center;
+
+    .button--edit {
+      background-color: $edit_button;
+    }
+
+    .button--edit:hover {
+      background-color: rgb(202, 169, 18);
+      transition: all .5s;
+    }
+
+    .button--delete {
+      background-color: $delete_button;
+    }
+
+    .button--delete:hover {
+      background-color: #af0a0ac5;
+      transition: all .5s;
+    }
+  }
+  tr:first-of-type {
+    background-color: rgb(172, 172, 172)!important;
+    color: black;
+    height: 3rem;
+  }
+
+  tr:nth-child(even) {
+    background-color: $blue_background;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $blue_header_background;
+  }
+}
+
+.actions_bar {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    margin: 0;
+  }
+
+  .icon-search {
+    font-size: 2rem;
+  }
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+
+  .title_page {
+    align-self: center;
+    color: $wheat_color;
+    font-size: 50px;
+  }
+}
