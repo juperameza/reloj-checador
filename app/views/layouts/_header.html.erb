@@ -1,6 +1,9 @@
 
 <div class="header">
   <% if admin_signed_in? %>
+  <div class="container__menu">
+    <button class="menu"> <i class="menu--icon fa-solid fa-bars"></i> </button>
+  </div>
     <%= button_to "Log Out", destroy_admin_session_path, method: :delete, class: "primary-button-style"  %>
   <% end %>
 
@@ -8,6 +11,6 @@
     <% if current_page?("/admins/sign_in") %>
       <%= button_to "Exit",  "/", method: :get, class: "primary-button-style" %>
     <% else %>
-     <%= button_to "Admin tools", "/admins/sign_in", method: :get, class: "primary-button-style" %>
+     <%= button_to "Admin tools", "/employee", method: :get, class: "primary-button-style" %>
     <% end %>
 </div>

@@ -18,4 +18,21 @@
     position: absolute;
     transform: translateX(-50%);
   }
+
+  .container__menu {
+    width: 100%;
+  }
+
+  .menu {
+    width: 90px;
+
+    &--icon {
+      font-size: 3rem;
+      width: 100%;
+    }
+  }
+
+  form {
+    margin-right: 2rem;
+  }
 }
