@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :admins
-  get '/admin', to: 'admin#login'
+  resources :employee
   root 'home#index'
   post "/", to:"home#create"
 end
