@@ -11,24 +11,23 @@
   <div class="container__table_employees">
     <table class="table_employees">
       <tr>
-          <th> ID </th>
-          <th> Nombre </th>
-          <th> Position </th>
-          <th> Email </th>
-          <th> Branch </th>
-          <th> Actions </th>
+        <th> ID </th>
+        <th> Nombre </th>
+        <th> Position </th>
+        <th> Email </th>
+        <th> Branch </th>
+        <th> Actions </th>
+      </tr>
+      <% @employees.each do | employee | %>
+        <tr>
+          <td> <%= employee.id %> </td>
+          <td> <%= employee.name %> </td>
+          <td> <%= employee.position %> </td>
+          <td> <%= employee.email %> </td>
+          <td> <%= employee.branch.name %> </td>
+          <td> <button class="button--edit"> Edit </button> <button class="button--delete"> Deactivate </button> </td>
         </tr>
-        <% @employees.each do | employee | %>
-          <tr>
-            <td> <%= employee.id %> </td>
-            <td> <%= employee.name %> </td>
-            <td> <%= employee.position %> </td>
-            <td> <%= employee.email %> </td>
-            <td> <%= employee.branch.name %> </td>
-            <td> <button class="button--edit"> Edit </button> <button class="button--delete"> Deactivate </button> </td>
-          </tr>
-        <% end %>
-  </table>
-
+      <% end %>
+    </table>
   </div>
 </div>

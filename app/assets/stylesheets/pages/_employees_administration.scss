@@ -8,9 +8,9 @@
 .table_employees {
   border: 2px solid black;
   color: white;
+  font-family: $font;
   margin: 2rem;
   width: 97%;
-  font-family: $font;
 
   td {
     text-align: center;
