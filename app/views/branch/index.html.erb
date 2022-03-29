@@ -1,1 +1,35 @@
-<h1>it is working</h1>
+<div class="main_container">
+  <h1 class="title_page"> Branch Administration </h1>
+  <div class="actions_bar">
+    <%= form_with(model: @employee) do |form| %>
+    <input placeholder="Search branch"/>
+    <i class="icon-search fa-solid fa-magnifying-glass"></i>
+    <% end %>
+    <%= button_to "+ Add branch", "/employee/new", method: :get, class: "primary-button-style" %>
+  </div>
+
+  <div class="container__table_employees">
+    <table class="table_employees">
+      <tr>
+        <th> ID </th>
+        <th> Nombre </th>
+        <th> City </th>
+        <th> Town </th>
+        <th> Number </th>
+        <th> CP </th>
+        <th> Actions </th>
+      </tr>
+      <% @branches.each do | branch | %>
+        <tr>
+          <td> <%= branch.id %> </td>
+          <td> <%= branch.name %> </td>
+          <td> <%= branch.city %> </td>
+          <td> <%= branch.town %> </td>
+          <td> <%= branch.number %> </td>
+          <td> <%= branch.street_cp.cp %> </td>
+          <td> <button class="button--edit"> Edit </button> <button class="button--delete"> Deactivate </button> </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
