@@ -8,10 +8,10 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag('reloj.js') %>
   </head>
-
-  <body>
-    <%= render 'layouts/header' %> 
+  <body onload="mueveReloj()">
+    <%= render 'layouts/header' %>
     <% if notice %>
       <%= javascript_tag "alert('#{flash[:notice]}')" %>
     <% end %>
