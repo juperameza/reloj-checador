@@ -12,9 +12,10 @@
     justify-content: center;
     margin: 0;
 
-    .hour {
+    #hour {
       color:  $black_hour_color;
-      font-size: 300px;
+      font-size: 80px;
+
       .type {
         flex-wrap: nowrap;
         font-size: 40px;
