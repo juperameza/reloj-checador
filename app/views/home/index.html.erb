@@ -1,11 +1,8 @@
+
 <div class="main">
   <div class="time">
-    <span class="date">
-      <%= I18n.l(Date.today, format: '%A, %d de %B de %Y') %>
-    </span>
-    <span class="hour">
-      <%= Time.now.strftime("%H:%M") %>
-    </span>
+    <span id="date"></span>
+    <span id="hour"></span>
   </div>
   <div class="number">
     <%= form_with(model: @employee) do |form| %>
