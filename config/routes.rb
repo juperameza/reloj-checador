@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :admins
-  resources :employee
+  resources :employees
   resources :branch
   root 'home#index'
   post "/", to:"home#create"

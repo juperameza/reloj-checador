@@ -1,4 +1,4 @@
-class EmployeeController < ApplicationController
+class EmployeesController < ApplicationController
   before_action :authenticate_admin!
 
   def index
@@ -7,13 +7,16 @@ class EmployeeController < ApplicationController
 
   def new
     @employee = Employee.new()
+    # @branches = Branch.all
+    # @branches = @branches.map { |branch| [branch.name, branch.id] }
   end
 
   def create
     @employee = Employee.new(employee_params)
 
     if @employee.save
-      redirect_to root_path
+
+      redirect_to employees_path
     else
       render :new, status: :unprocessable_entity
     end
