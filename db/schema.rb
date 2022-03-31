@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_23_232155) do
     t.string "email"
     t.integer "private_number"
     t.string "position"
+    t.boolean "status", default: true
     t.bigint "branch_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

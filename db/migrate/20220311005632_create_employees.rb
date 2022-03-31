@@ -5,6 +5,7 @@ class CreateEmployees < ActiveRecord::Migration[7.0]
       t.string :email
       t.integer :private_number
       t.string :position
+      t.boolean :status, default: true
       t.references :branch, null: false, foreign_key: true
 
       t.timestamps
