@@ -13,6 +13,9 @@ gem "sprockets-rails"
 #Devise Gem
 gem "devise"
 
+#Simple From Gem
+gem 'simple_form'
+
 # Use pg as the database for Active Record
 gem "pg", "~> 1.1"
 

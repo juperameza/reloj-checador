@@ -21,20 +21,28 @@
 
     .button--edit:hover {
       background-color: rgb(202, 169, 18);
-      transition: all .5s;
+      transition: all 0.5s;
     }
 
     .button--delete {
       background-color: $delete_button;
     }
 
+    .button--activate {
+      background-color: $activate_button;
+    }
+
+    .button--activate:hover {
+      background-color: #228e27;
+    }
+
     .button--delete:hover {
       background-color: #af0a0ac5;
-      transition: all .5s;
+      transition: all 0.5s;
     }
   }
   tr:first-of-type {
-    background-color: rgb(172, 172, 172)!important;
+    background-color: rgb(172, 172, 172) !important;
     color: black;
     height: 3rem;
   }
@@ -71,4 +79,25 @@
     color: $wheat_color;
     font-size: 50px;
   }
+}
+
+.table__create {
+  text-align: center;
+}
+
+.simple_form {
+  .input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  select {
+    font-size: 20px;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
 }
