@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :branches
   devise_for :admins
   resources :employees do
     member do
