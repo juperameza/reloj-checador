@@ -16,6 +16,7 @@
         <th> Position </th>
         <th> Email </th>
         <th> Branch </th>
+         <th> Status </th>
         <th> Actions </th>
       </tr>
       <% @employees.each do | employee | %>
@@ -25,9 +26,10 @@
           <td> <%= employee.position %> </td>
           <td> <%= employee.email %> </td>
           <td> <%= employee.branch.name %> </td>
+          <td> <%= employee.status %> </td>
           <td class="actions">
             <%= button_to "Edit", edit_employee_url(employee.id), method: :get, class: "button--edit" %>
-            <%= button_to "Deactivate" , employee_path(employee.id),data: {turbo_method: :deactivate, turbo_confirm: "Are you sure?" }, class: "button--delete" %>
+            <%= button_to 'Press me', button_url(employee.id), method: :put %>
           </td>
         </tr>
       <% end %>

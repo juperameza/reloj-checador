@@ -33,9 +33,16 @@ class EmployeesController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
+
+  def update_status
+    @employee = Employee.find(params[:id])
+    @employe.update_attribute(:status, false)
+    redirect_to employees_path
+  end
+
   private
 
   def employee_params
-    params.require(:employee).permit(:name, :email, :private_number, :position, :branch_id)
+    params.permit(:name, :email, :private_number, :position, :status, :branch_id)
   end
 end
