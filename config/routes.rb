@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admins
-  resources :employees
+  resources :employees do
+    member do
+      put :update_status
+    end
+  end
   resources :branch
-  patch "employees/:id",to: "employees#update_status", as:'button'
-  put "employees/update_status/:id",to: "employees#update_status2"
   root 'home#index'
   post "/", to:"home#create"
 end

@@ -28,6 +28,14 @@
       background-color: $delete_button;
     }
 
+    .button--activate {
+      background-color: $activate_button;
+    }
+
+    .button--activate:hover {
+      background-color: #228e27;
+    }
+
     .button--delete:hover {
       background-color: #af0a0ac5;
       transition: all 0.5s;

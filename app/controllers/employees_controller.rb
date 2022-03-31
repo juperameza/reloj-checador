@@ -36,13 +36,13 @@ class EmployeesController < ApplicationController
 
   def update_status
     @employee = Employee.find(params[:id])
-    @employe.update_attribute(:status, false)
+    @employee.toggle!(:status)
     redirect_to employees_path
   end
 
   private
 
   def employee_params
-    params.permit(:name, :email, :private_number, :position, :status, :branch_id)
+    params.require(:employee).permit(:name, :email, :private_number, :position, :status, :branch_id)
   end
 end
