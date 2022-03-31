@@ -5,7 +5,7 @@
     <input placeholder="Search employee"/>
     <i class="icon-search fa-solid fa-magnifying-glass"></i>
     <% end %>
-    <%= button_to "+ Add employee", "/employees/new", method: :get, class: "primary-button-style" %>
+    <%= button_to "+ Add employee", new_employee_path, method: :get, class: "primary-button-style" %>
   </div>
 
   <div class="container__table_admin">
@@ -25,7 +25,10 @@
           <td> <%= employee.position %> </td>
           <td> <%= employee.email %> </td>
           <td> <%= employee.branch.name %> </td>
-          <td> <button class="button--edit"> Edit </button> <button class="button--delete"> Deactivate </button> </td>
+          <td class="actions">
+            <%= button_to "Edit", edit_employee_url(employee.id), method: :get, class: "button--edit" %>
+            <%= button_to "Deactivate" , employee_path(employee.id),data: {turbo_method: :deactivate, turbo_confirm: "Are you sure?" }, class: "button--delete" %>
+          </td>
         </tr>
       <% end %>
     </table>

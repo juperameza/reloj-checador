@@ -7,8 +7,6 @@ class EmployeesController < ApplicationController
 
   def new
     @employee = Employee.new()
-    # @branches = Branch.all
-    # @branches = @branches.map { |branch| [branch.name, branch.id] }
   end
 
   def create
@@ -30,12 +28,11 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
 
     if @employee.update(employee_params)
-      redirect_to @employee
+      redirect_to employees_path
     else
       render :edit, status: :unprocessable_entity
     end
   end
-
   private
 
   def employee_params
