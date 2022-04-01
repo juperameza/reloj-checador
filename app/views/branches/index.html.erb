@@ -11,11 +11,12 @@
   <div class="container__table_admin">
     <table class="table_admin">
       <tr>
-        <th> ID </th>
-        <th> Nombre </th>
-        <th> Position </th>
-        <th> Email </th>
-        <th> Branch </th>
+        <th> Name </th>
+        <th> City </th>
+        <th> Town </th>
+        <th> Number </th>
+        <th> Street </th>
+        <th> CP </th>
         <th> Actions </th>
       </tr>
       <% @branches.each do | branch | %>
@@ -24,7 +25,8 @@
           <td> <%= branch.city %> </td>
           <td> <%= branch.town %> </td>
           <td> <%= branch.number %> </td>
-          <td> <%= branch.street_cp_id %> </td>
+          <td> <%= branch.street_cp.street_name %> </td>
+          <td> <%= branch.street_cp.cp %> </td>
           <td class="actions">
             <%= button_to "Edit", edit_branch_url(branch.id), method: :get, class: "button--edit" %>
             <%= button_to "Delete", branch_path(branch.id), method: :delete, class: "button--delete" %>
