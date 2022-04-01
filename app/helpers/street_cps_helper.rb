@@ -1,0 +1,2 @@
+module StreetCpsHelper
+end

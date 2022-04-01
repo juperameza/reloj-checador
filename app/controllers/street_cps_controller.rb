@@ -1,0 +1,2 @@
+class StreetCpsController < ApplicationController
+end
