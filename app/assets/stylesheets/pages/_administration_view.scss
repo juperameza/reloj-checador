@@ -101,3 +101,15 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.container__cp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .test {
+    margin-left: 20px;
+    font-size: 20px;
+    width: 150px;
+  }
+}

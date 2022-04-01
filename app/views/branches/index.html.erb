@@ -13,23 +13,21 @@
       <tr>
         <th> ID </th>
         <th> Nombre </th>
-        <th> City </th>
-        <th> Town </th>
-        <th> Number </th>
-        <th> CP </th>
+        <th> Position </th>
+        <th> Email </th>
+        <th> Branch </th>
         <th> Actions </th>
       </tr>
       <% @branches.each do | branch | %>
         <tr>
-          <td> <%= branch.id %> </td>
           <td> <%= branch.name %> </td>
           <td> <%= branch.city %> </td>
           <td> <%= branch.town %> </td>
           <td> <%= branch.number %> </td>
-          <td> <%= branch.street_cp.cp %> </td>
-          <td>
+          <td> <%= branch.street_cp_id %> </td>
+          <td class="actions">
             <%= button_to "Edit", edit_branch_url(branch.id), method: :get, class: "button--edit" %>
-            <button class="button--delete"> Deactivate </button> 
+            <%= button_to "Delete", branch_path(branch.id), method: :delete, class: "button--delete" %>
           </td>
         </tr>
       <% end %>
