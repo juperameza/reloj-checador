@@ -1,0 +1,7 @@
+<div class="table__create">
+  <%= simple_form_for(@streetCp) do |f| %> 
+    <%= f.input :street_name, required: true %>
+    <%= f.input :cp, required: true %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
