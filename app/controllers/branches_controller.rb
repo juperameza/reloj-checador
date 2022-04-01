@@ -38,7 +38,6 @@ class BranchesController < ApplicationController
     respond_to do |format|
       if @branch.update(branch_params)
         format.html { redirect_to branches_path, notice: "Branch was successfully updated." }
-       
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

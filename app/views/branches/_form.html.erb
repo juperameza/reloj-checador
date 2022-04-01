@@ -5,8 +5,7 @@
     <%= f.input :town, required: true %>
     <%= f.input :number, required: true %>
     <div class="container__cp">
-      <%= f.association :street_cp, label_method: :cp, prompt: "Select CP" %>
-      <%= f.button :submit, 'Create CP', class:'test' %>
+      <%= f.association :street_cp, label: "Street" , label_method: :street_name, prompt: "Select Street" %>
     </div>
     <%= f.button :submit %>
   <% end %>
