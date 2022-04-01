@@ -1,14 +1,38 @@
-<p style="color: green"><%= notice %></p>
+<div class="main_container">
+  <h1 class="title_page"> Branch Administration </h1>
+  <div class="actions_bar">
+    <%= form_with(model: @employee) do |form| %>
+    <input placeholder="Search branch"/>
+    <i class="icon-search fa-solid fa-magnifying-glass"></i>
+    <% end %>
+    <%= button_to "+ Add branch", new_branch_path, method: :get, class: "primary-button-style" %>
+  </div>
 
-<h1>Branches</h1>
-
-<div id="branches">
-  <% @branches.each do |branch| %>
-    <%= render branch %>
-    <p>
-      <%= link_to "Show this branch", branch %>
-    </p>
-  <% end %>
+  <div class="container__table_admin">
+    <table class="table_admin">
+      <tr>
+        <th> ID </th>
+        <th> Nombre </th>
+        <th> City </th>
+        <th> Town </th>
+        <th> Number </th>
+        <th> CP </th>
+        <th> Actions </th>
+      </tr>
+      <% @branches.each do | branch | %>
+        <tr>
+          <td> <%= branch.id %> </td>
+          <td> <%= branch.name %> </td>
+          <td> <%= branch.city %> </td>
+          <td> <%= branch.town %> </td>
+          <td> <%= branch.number %> </td>
+          <td> <%= branch.street_cp.cp %> </td>
+          <td>
+            <%= button_to "Edit", edit_branch_url(branch.id), method: :get, class: "button--edit" %>
+            <button class="button--delete"> Deactivate </button> 
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
-
-<%= link_to "New branch", new_branch_path %>
