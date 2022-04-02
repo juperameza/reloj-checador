@@ -5,6 +5,7 @@ class CreateBranches < ActiveRecord::Migration[7.0]
       t.string :city
       t.string :town
       t.integer :number
+      t.boolean :status
       t.references :street_cp, null: false, foreign_key: true
 
       t.timestamps
