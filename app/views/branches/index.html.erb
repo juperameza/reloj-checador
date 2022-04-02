@@ -1,7 +1,7 @@
 <div class="main_container">
   <h1 class="title_page"> Branch Administration </h1>
   <div class="actions_bar">
-    <%= form_with(model: @employee) do |form| %>
+    <%= form_with(model: @branch) do |form| %>
     <input placeholder="Search branch"/>
     <i class="icon-search fa-solid fa-magnifying-glass"></i>
     <% end %>
@@ -17,6 +17,7 @@
         <th> Number </th>
         <th> Street </th>
         <th> CP </th>
+        <th> Status </th>
         <th> Actions </th>
       </tr>
       <% @branches.each do | branch | %>
@@ -27,9 +28,13 @@
           <td> <%= branch.number %> </td>
           <td> <%= branch.street_cp.street_name %> </td>
           <td> <%= branch.street_cp.cp %> </td>
+          <td> <%= branch.status ? "Active" : "Inactive" %> </td>
           <td class="actions">
             <%= button_to "Edit", edit_branch_url(branch.id), method: :get, class: "button--edit" %>
-            <%= button_to "Delete", branch_path(branch.id), method: :delete, class: "button--delete" %>
+            <%= button_to "#{branch.status ? "Deactivate" : "Activate"}",
+                          update_status_branch_path(branch),
+                          method: :put,
+                          class: "#{branch.status ? "button--delete" : "button--activate"}"%>
           </td>
         </tr>
       <% end %>

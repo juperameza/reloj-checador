@@ -45,13 +45,12 @@ class BranchesController < ApplicationController
   end
 
   # DELETE /branches/1 or /branches/1.json
-  def destroy
-    @branch.destroy
-
-    respond_to do |format|
-      format.html { redirect_to branches_url, notice: "Branch was successfully destroyed." }
-    end
+  def update_status
+    @branch = Branch.find(params[:id])
+    @branch.toggle!(:status)
+    redirect_to branches_path
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

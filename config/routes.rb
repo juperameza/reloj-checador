@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :branches
+  resources :branches do
+  member do
+    put :update_status
+  end
+end
   resources :street_cps
   devise_for :admins
   resources :employees do
