@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  street-cp: one
   city: MyString
   town: MyString
   number: 1
+  street_cp: one
 
 two:
   name: MyString
-  street-cp: two
   city: MyString
   town: MyString
   number: 1
+  street_cp: two

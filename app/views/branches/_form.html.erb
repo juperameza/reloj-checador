@@ -1,0 +1,12 @@
+<div class="table__create">
+  <%= simple_form_for(@branch) do |f| %> 
+    <%= f.input :name, required: true %>
+    <%= f.input :city, required: true %>
+    <%= f.input :town, required: true %>
+    <%= f.input :number, required: true %>
+    <div class="container__cp">
+      <%= f.association :street_cp, label: "Street" , label_method: :street_name, prompt: "Select Street" %>
+    </div>
+    <%= f.button :submit %>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<div class="table__create">
+  <%= render "form", branch: @branch %>
+  <%= button_to "New street", new_street_cp_path, method: :get, class: "button--edit" %>
+</div>
+<br>
+<div>
+  <%= link_to "Back to branches", branches_path %>
+</div>

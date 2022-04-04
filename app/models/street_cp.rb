@@ -1,3 +1,3 @@
 class StreetCp < ApplicationRecord
-  has_many :branch
+  has_many :branches
 end

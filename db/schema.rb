@@ -37,10 +37,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_23_232155) do
 
   create_table "branches", force: :cascade do |t|
     t.string "name"
-    t.bigint "street_cp_id", null: false
     t.string "city"
     t.string "town"
     t.integer "number"
+    t.boolean "status"
+    t.bigint "street_cp_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["street_cp_id"], name: "index_branches_on_street_cp_id"
