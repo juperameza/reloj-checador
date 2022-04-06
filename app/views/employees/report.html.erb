@@ -1,0 +1,39 @@
+<div class="main_container">
+  <h1 class="title_page"> Employee Administration </h1>
+  <div class="actions_bar">
+    <%= form_with(model: @employee) do |form| %>
+    <input placeholder="Search employee"/>
+    <i class="icon-search fa-solid fa-magnifying-glass"></i>
+    <% end %>
+    <%= button_to "+ Add employee", new_employee_path, method: :get, class: "primary-button-style" %>
+  </div>
+
+  <div class="container__table_admin">
+    <table class="table_admin">
+      <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Position </th>
+        <th> Email </th>
+        <th> Branch </th>
+        <th> Total assits </th>
+        <th> Absence per month </th>
+        <th> Average time in </th>
+        <th> Average time out </th>
+      </tr>
+      <% @employees.each do | employee | %>
+        <tr>
+          <td> <%= employee.id %> </td>
+          <td> <%= employee.name %> </td>
+          <td> <%= employee.position %> </td>
+          <td> <%= employee.email %> </td>
+          <td> <%= employee.branch.name %> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

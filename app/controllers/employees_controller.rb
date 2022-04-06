@@ -5,6 +5,10 @@ class EmployeesController < ApplicationController
     @employees = Employee.includes(:branch)
   end
 
+  def report
+    @employees = Employee.includes(:branch).where(status: true)
+  end
+
   def new
     @employee = Employee.new()
   end

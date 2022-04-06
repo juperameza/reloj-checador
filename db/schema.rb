@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_23_232155) do
     t.string "city"
     t.string "town"
     t.integer "number"
-    t.boolean "status"
+    t.boolean "status", default: true
     t.bigint "street_cp_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
