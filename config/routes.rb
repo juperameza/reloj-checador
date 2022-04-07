@@ -10,6 +10,10 @@ end
     member do
       put :update_status
     end
+
+    collection do
+      get :report
+    end
   end
   root 'home#index'
   post "/", to:"home#create"
