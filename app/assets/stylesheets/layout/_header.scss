@@ -23,16 +23,60 @@
     width: 100%;
   }
 
-  .menu {
-    width: 90px;
-
-    &--icon {
-      font-size: 3rem;
-      width: 100%;
-    }
-  }
-
   form {
     margin-right: 2rem;
+  }
+
+  .menuItem {
+    color: white;
+    display: block;
+    font-size: 1.8rem;
+    margin: 2rem 4rem;
+    text-decoration: none;
+  }
+
+  .menuItem:hover {
+    color: #1099b4;
+    font-weight: 700;
+    transition: all .3s ease;
+  }
+
+  .material-icons {
+    font-size: 45px;
+  }
+
+  .hamburger {
+    background: white;
+    border: black solid 1px;
+    cursor: pointer;
+    padding: 4px;
+    position: fixed;
+    top: 1rem;
+    width: 60px;
+    z-index: 100;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+
+  .menu {
+    background: rgba(0, 0, 0, 0.836);
+    bottom: 0;
+    color: white;
+    left: 0;
+    list-style: none;
+    padding-top: 4rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    width: 15%;
+    z-index: 99;
+  }
+
+  .showMenu {
+    transform: translateX(0);
   }
 }
