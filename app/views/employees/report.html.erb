@@ -29,7 +29,7 @@
           <td> <%= employee.email %> </td>
           <td> <%= employee.branch.name %> </td>
           <td> <%= employee.total_assistance %> </td>
-          <td> </td>
+          <td> <%= employee.absences(employee.id) %> </td>
           <td> </td>
           <td> </td>
         </tr>
