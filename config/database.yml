@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: kata_07_reloj_checador_k7_f22_t2_production
   username: kata_07_reloj_checador_k7_f22_t2
   password: <%= ENV["KATA_07_RELOJ_CHECADOR_K7_F22_T2_DATABASE_PASSWORD"] %>
